@@ -1,0 +1,6 @@
+Collection 接口：单列集合
+       List 接口：存储有序的，可重复的数据--》“动态”数组
+           ArrayList:list接口主要实现类，线程不安全，效率高，底层使用Object[]存储
+           LinkedList：底层使用双向链表存储，使用频繁的插入删除操作，使用此类效率比
+                       ArrayList高
+           Vector：作为1.0就存在的List接口实现类：线程安全，效率低，底层使用Object[]存储
