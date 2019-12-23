@@ -63,23 +63,25 @@ public class Test_Collection {
         coll.add(new Person("jerry", 20));
         coll.add(new Person("tom"));
         Iterator iterator = coll.iterator();
-        while (iterator.hasNext()){
-            Object obj=iterator.next();
-            if (new Person("tom").equals(obj)){
+        while (iterator.hasNext()) {
+            Object obj = iterator.next();
+            if (new Person("tom").equals(obj)) {
                 iterator.remove();
             }
         }
-        iterator=coll.iterator();
-        while (iterator.hasNext()){
+        iterator = coll.iterator();
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }
+
     public static boolean add(Integer e) {
         throw new UnsupportedOperationException();
     }
+
     @Test
-    public void test5(){
-        Collection l=new ArrayList(5);
+    public void test5() {
+        Collection l = new ArrayList(5);
         l.add(1);
         l.add(2);
         l.add(null);
@@ -90,15 +92,16 @@ public class Test_Collection {
         System.out.println(add(new Integer(1)));
 
     }
+
     @Test
-    public void test6(){
-        List l1= new ArrayList();
+    public void test6() {
+        List l1 = new ArrayList();
         l1.add("1");
         l1.add("23");
         l1.add("b");
         l1.add("bb");
         l1.add("d");
-        List l2=new ArrayList();
+        List l2 = new ArrayList();
         l2.add("23");
         l2.add("bb");
 

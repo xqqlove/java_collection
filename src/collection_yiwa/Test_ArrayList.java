@@ -70,7 +70,7 @@ public class Test_ArrayList {
         list.add("AA");
         list.add(new Person("tom", 20));
         list.add(456);
-        Iterator it=list.iterator();
+        Iterator it = list.iterator();
         System.out.println(list);
 //        System.out.println(list.indexOf("AA"));
 //        List<String> characters = new ArrayList<>();
@@ -101,24 +101,25 @@ public class Test_ArrayList {
 //        }
         it1.remove();
         System.out.println(l2);
-        LinkedList link=new LinkedList();
+        LinkedList link = new LinkedList();
         link.add(1);
         link.addFirst(4);
         link.addLast(5);
         System.out.println(link);
 
     }
+
     @Test
-    public void test4(){
-        LinkedList link=new LinkedList();
+    public void test4() {
+        LinkedList link = new LinkedList();
         link.add(1);
         link.addFirst(4);
         link.addLast(5);
         System.out.println(link);
-        System.out.println("clear: "+link);
-        link.addAll(0,Arrays.asList("x","6","y"));
+        System.out.println("clear: " + link);
+        link.addAll(0, Arrays.asList("x", "6", "y"));
         System.out.println(link);
-        ListIterator listIterator=link.listIterator();
+        ListIterator listIterator = link.listIterator();
 
         System.out.println(link);
 

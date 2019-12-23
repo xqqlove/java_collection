@@ -4,3 +4,6 @@ Collection 接口：单列集合
            LinkedList：底层使用双向链表存储，使用频繁的插入删除操作，使用此类效率比
                        ArrayList高
            Vector：作为1.0就存在的List接口实现类：线程安全，效率低，底层使用Object[]存储
+       Set 接口：不可以有重复元素的集合，
+           HashSet:
+           TreeSet:
