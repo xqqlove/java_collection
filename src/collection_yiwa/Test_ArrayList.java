@@ -119,7 +119,7 @@ public class Test_ArrayList {
         link.addAll(0,Arrays.asList("x","6","y"));
         System.out.println(link);
         ListIterator listIterator=link.listIterator();
-        
+
         System.out.println(link);
 
     }
