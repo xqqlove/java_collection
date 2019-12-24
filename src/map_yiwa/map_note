@@ -3,10 +3,10 @@ Map:双列数据，存储key-value对数据
           LinkedHashMap:保证遍历Map元素时可按照添加的顺序实现遍历
                        在原有的HashMap底层结构上，添加一对引用，指向前一个后于一个
                        元素，对于频繁遍历操作 此类执行效率高于HashMAp
-          TreeMap:保证按照key-value对进行排序实现遍历排序。此时考虑key的自然和顺序
-                  排序，底层使用红黑树
-          Hashtable：线程安全效率低 最早的实现类 不能存储null的key value
-                Properties:常用来处理配置文件，key value都是String类型
+    TreeMap:保证按照key-value对进行排序实现遍历排序。此时考虑key的自然和顺序
+            排序，底层使用红黑树
+    Hashtable：线程安全效率低 最早的实现类 不能存储null的key value
+             Properties:常用来处理配置文件，key value都是String类型
     HashMap底层：数组+链表（jdk7）
     HashMap底层：数组+链表+红黑树(jdk8)
 
