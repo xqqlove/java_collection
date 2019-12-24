@@ -1,4 +1,4 @@
-package collection_yiwa;
+package list_yiwa;
 
 import java.io.Serializable;
 import java.util.*;

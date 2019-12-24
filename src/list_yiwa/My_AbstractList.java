@@ -1,10 +1,9 @@
-package collection_yiwa;
+package list_yiwa;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer;
 
 public abstract class My_AbstractList<E> extends My_AbstractCollection<E> implements My_List<E> {
     protected transient int modCount = 0;

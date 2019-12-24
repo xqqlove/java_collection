@@ -1,6 +1,4 @@
-package collection_yiwa;
-
-import java.util.Objects;
+package list_yiwa;
 
 public class Person {
     String name;

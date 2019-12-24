@@ -4,6 +4,20 @@ Collection 接口：单列集合
            LinkedList：底层使用双向链表存储，使用频繁的插入删除操作，使用此类效率比
                        ArrayList高
            Vector：作为1.0就存在的List接口实现类：线程安全，效率低，底层使用Object[]存储
-       Set 接口：不可以有重复元素的集合，
-           HashSet:
-           TreeSet:
+       Set 接口：无序，不可以有重复元素的集合，
+           HashSet:Set接口主要实现类 ；线程不安全 不可存储null
+                  LinkedHashSet:HashSet的子类，遍历其内数据时，可按照添加顺序遍历
+                                 再添加数据的同时每个数据维护了两个应用记录前一个
+                                 和后一个数据
+           TreeSet:可按照添加的对象指定属性进行排序，不能添加不同类的对象
+       Set:接口中没有额外定义的方案，使用都是Collection中声明过的方法
+           Set添加元素的过程（HashSet为例）：向HashSet添加元素a，首先调用元素a所在类的
+           hashCode()方法，计算元素a的hash值，此hash值通过某种算法计算出在HashSet底层
+           数组中存放的位置，（即索引位置）判断数组此位置上是否已经有元素：
+              如果此位置上没有其他元素，则元素a添加成功
+              如果hash值相同，需要调用元素所在类的equals方法
+                 equals返回true元素添加失败
+                 equals返回false元素添加成功
+               元素a与已经存在指定索引位置上数据以链表的方式存储
+           HashSet底层：数组+链表的结构
+            向Set中添加的数据，其所在的类一定要重写hashCode()和equals()

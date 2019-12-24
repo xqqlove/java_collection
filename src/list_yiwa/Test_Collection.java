@@ -1,4 +1,4 @@
-package collection_yiwa;
+package list_yiwa;
 
 import org.junit.Test;
 

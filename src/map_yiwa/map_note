@@ -1,0 +1,35 @@
+Map:双列数据，存储key-value对数据
+    HashMap：作为主要实现类，线程不安全效率高，可以存储null的key value
+          LinkedHashMap:保证遍历Map元素时可按照添加的顺序实现遍历
+                       在原有的HashMap底层结构上，添加一对引用，指向前一个后于一个
+                       元素，对于频繁遍历操作 此类执行效率高于HashMAp
+          TreeMap:保证按照key-value对进行排序实现遍历排序。此时考虑key的自然和顺序
+                  排序，底层使用红黑树
+          Hashtable：线程安全效率低 最早的实现类 不能存储null的key value
+                Properties:常用来处理配置文件，key value都是String类型
+    HashMap底层：数组+链表（jdk7）
+    HashMap底层：数组+链表+红黑树(jdk8)
+
+
+
+    1.HashMap底层实现原理(以jdk7为例)
+        HashMap map=new HashMap();
+           在实例化以后，底层创建了长度是16的一维数组Entry[] table
+        map.put(key,value)
+           首先，调用key所在类的hashCode()计算key的哈希值，此哈希值在某种算法计算后得到
+           Entry数组中的存放位置，若此位置的数据为空，则key value添加成功
+           若此位置的数据不为空（意味此位置上存在一个或多个数据(以链表的形式存在)），比较
+           key和已经存在的一个或多个数据的哈希值：
+               如果，key的哈希值与已经存在数据的哈希值都不相同，此时key value添加成功
+               如果，key的哈希值与已经存在的(key1,value1)的哈希值相同，继续比较：调用equals
+                     若equals调用返回false 添加key value成功
+                     若返回true 用value替换原来的value。
+        jdk8相较于jdk7的底层实现异同
+         1.new HashMap():底层没有创建一个长度为16的数组
+         2.jdk8底层的数组是Node[] 而非Entry[]
+         3.首次调用put方法时 底层创建长度为16的数组
+         4.jdk7底层结构只有数组+链表，jdk8底层结构：数组+链表+红黑树
+            当数组某一索引位置上的元素以链表形式存在的数据>8且当前数组
+            长度>64时，此时，此索引位置上的所有数据改为红黑树存储。
+    2.HashMap与HashTable 的异同
+
