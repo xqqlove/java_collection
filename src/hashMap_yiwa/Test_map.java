@@ -1,5 +1,6 @@
 package hashMap_yiwa;
 
+import list_yiwa.Person;
 import org.junit.Test;
 
 import java.util.*;
@@ -7,7 +8,7 @@ import java.util.*;
 public class Test_map {
     @Test
     public void test() {
-        Map m = new TreeMap();
+        Map m = new HashMap();
         m.put(1, "qq");
         m.put(3, null);
         m.put(2, "XX");
@@ -59,6 +60,15 @@ public class Test_map {
     public static void main(String[] args) {
 
     }
-
+    @Test
+    public void testh(){
+        Object o=new Person("tom");
+        int i=o.hashCode();
+        String s = Integer.toBinaryString(i);
+        System.out.println(s.length());
+        System.out.println(Integer.toBinaryString(i));
+        int i1 = i ^ (i >>> 16);
+        System.out.println(Integer.toBinaryString(i1));
+    }
 
 }

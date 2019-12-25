@@ -4,7 +4,7 @@ Map:双列数据，存储key-value对数据
                        在原有的HashMap底层结构上，添加一对引用，指向前一个后于一个
                        元素，对于频繁遍历操作 此类执行效率高于HashMAp
     TreeMap:保证按照key-value对进行排序实现遍历排序。此时考虑key的自然和顺序
-            排序，底层使用红黑树
+            排序，底层使用红黑树.key必须是相同的类对象
     Hashtable：线程安全效率低 最早的实现类 不能存储null的key value
              Properties:常用来处理配置文件，key value都是String类型
     HashMap底层：数组+链表（jdk7）
@@ -31,6 +31,7 @@ Map:双列数据，存储key-value对数据
          4.jdk7底层结构只有数组+链表，jdk8底层结构：数组+链表+红黑树
             当数组某一索引位置上的元素以链表形式存在的数据>8且当前数组
             长度>64时，此时，此索引位置上的所有数据改为红黑树存储。
-            
+
     2.HashMap与HashTable 的异同
 
+   
