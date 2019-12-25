@@ -40,7 +40,7 @@ public class BinarySearchTree {
      *前序遍历，“中左右”
      *中序遍历，“左中右”
      *后续遍历，“左右中”
-     */
+     *///https://blog.csdn.net/lusa1314/article/details/87267349
     //前序遍历
     public void preOrder(Node root){
         if (root!=null){
@@ -87,7 +87,7 @@ public class BinarySearchTree {
 
     }
     //根据值查找节点
-    public Node find(int data){
+    public Node find(int data){//时间复杂度时间复杂度为O(logN)
         Node current=root;
         while (current.data!=data){
             if (data>current.data)
