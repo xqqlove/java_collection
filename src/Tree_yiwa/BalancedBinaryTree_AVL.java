@@ -223,7 +223,7 @@ public class BalancedBinaryTree_AVL<T extends Comparable> {
 
     public static void main(String[] args) {
         BalancedBinaryTree_AVL<Integer> avlTree=new BalancedBinaryTree_AVL<>();
-        for (int i=0;i<18;i++){
+        for (int i=0;i<1800;i++){
             avlTree.insert(i);
         }
         avlTree.printTree(avlTree.root);
