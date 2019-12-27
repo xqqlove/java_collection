@@ -182,6 +182,15 @@ public class BalancedBinaryTree_AVL<T extends Comparable> {
         p.height=Math.max(height(p.left),height(p.right))+1;
         return p;
     }
+
+    /**
+     * ① 在结点X的左孩子结点的左子树中插入元素
+     * ② 在结点X的左孩子结点的右子树中插入元素
+     * ③ 在结点X的右孩子结点的左子树中插入元素
+     * ④ 在结点X的右孩子结点的右子树中插入元素
+     * @param x
+     * @return
+     */
     //左左单旋转
     private AVLNode<T> singleRotateLeft(AVLNode<T> x){
         AVLNode<T> w=x.left;
